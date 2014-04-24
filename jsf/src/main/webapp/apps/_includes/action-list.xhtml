@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:pretty="http://ocpsoft.com/prettyfaces" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:of = "http://omnifaces.org/functions" >
+	
+	<ui:param name="idModel" value="#{controller.model.id}" />
+	
+	<div class="col-xs-12 center">
+		<p>
+			<ui:repeat var="act" value="#{controller.actionsPageByUser}">
+				<h:panelGroup rendered="#{act.typeComponet=='LINK' &#38;&#38; (act.code eq 'actEdit' or act.code eq 'actView' or act.code eq 'actReturn')}">
+					<a href="#{controller.contexPath()}#{controller.resourceSelected.locationOfFiles}#{act.method}/#{idModel}" title="#{act.name}" class="btn btn-lg btn-#{act.classColor} btn-block">
+						<i class="#{act.icon}"/>
+						#{act.name}
+					</a>
+				</h:panelGroup>
+				
+				<h:panelGroup rendered="#{act.typeComponet=='LINK' &#38;&#38; (act.code eq 'actNew' or act.code eq 'actList')}">
+					<a href="#{controller.contexPath()}#{controller.resourceSelected.locationOfFiles}#{act.method}" title="#{act.name}" class="btn btn-lg btn-#{act.classColor} btn-block">
+						<i class="#{act.icon}"/>
+						#{act.name}
+					</a>
+				</h:panelGroup>
+				
+				<h:panelGroup rendered="#{act.typeComponet=='PCOMMANDBUTTON'}">
+					<p:commandButton styleClass="btn btn-lg btn-#{act.classColor} btn-block" icon="#{act.icon}" value="#{act.name}" title="#{act.name}" action="#{controller.methodAction(act)}" update="#{act.updateComponent}">
+						<ui:repeat var="ap" value="#{act.params}">
+							#{ap.param}
+						</ui:repeat>
+					</p:commandButton>
+				</h:panelGroup>
+			</ui:repeat>
+		</p>
+	</div>
+</ui:composition>

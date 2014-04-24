@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pretty="http://ocpsoft.com/prettyfaces"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<f:view contentType="text/html">
+	<h:head>
+		<f:facet name="first">
+			<meta http-equiv="X-UA-Compatible" content="EmulateIE8" />
+			<meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />
+			<title>Autenticação</title>
+		</f:facet>
+		
+		<!-- Link para a pasta assets -->
+		<pretty:urlbuffer  var="assets" mappingId="assets" />
+
+		<!-- CSS -->
+		<link type="text/css" rel="stylesheet" href="#{assets}css/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="#{assets}css/login.css" />
+
+		<style type="text/css">
+			.ui-chkbox-icon {
+				width: 16px;
+				margin-bottom: -3px;
+			}
+			
+			.ui-chkbox-box {
+				position: relative;
+				background-image: -webkit-gradient( linear, right top, right bottom, color-stop(0, #B3B9BD), color-stop(1, #5D6163) );
+				background-image: -o-linear-gradient(bottom, #B3B9BD 0%, #5D6163 100%);
+				background-image: -moz-linear-gradient(bottom, #B3B9BD 0%, #5D6163 100%);
+				background-image: -webkit-linear-gradient(bottom, #B3B9BD 0%, #5D6163 100%);
+				background-image: -ms-linear-gradient(bottom, #B3B9BD 0%, #5D6163 100%);
+				background-image: linear-gradient(to bottom, #7BCAFF 0%, #97C8E0 100%);
+				
+				margin-bottom: -3px;
+			}
+		</style>
+	</h:head>
+
+	<h:body>
+		<p:ajaxStatus onstart="statusDialog.show();" onsuccess="statusDialog.hide();" />
+		
+		<div class="container" id="login-block">
+			<div class="row">
+				<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+
+					<div class="login-box clearfix animated flipInY">
+						<div class="page-icon animated bounceInDown">
+							<img class="img-responsive" src="#{assets}images/login-key-icon.png" alt="Key icon"></img>
+						</div>
+						<div class="login-logo">
+							<a href="./login.jsf"> 
+								<img src="#{assets}images/login-logo.png" alt="Company Logo"></img>
+							</a>
+						</div>
+						<hr />
+
+						<div class="login-form">
+							<h:form>
+								<p:messages id="msgLogin" autoUpdate="true" showDetail="false" closable="true" />
+								
+								<c:if test="#{loginController.sessionExpired}">
+									<div class="alert alert-danger fade in">
+										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&#215;</button>
+										Sua sessão foi expirada!
+									</div>
+								</c:if>
+
+								<h:inputText placeholder="User name" styleClass="input-field" value="#{loginController.keyUser}" />
+								<h:inputSecret placeholder="Password" styleClass="input-field" value="#{loginController.password}" />
+								<div class="login-links">
+									<span class="lbl"> Lembrar </span>
+									<p:selectBooleanCheckbox value="#{loginController.remember}"/>
+								</div>
+								<p:commandButton styleClass="btn btn-login" value="Login" action="#{loginController.logar()}" update="msgLogin"/>
+							</h:form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- basic scripts -->
+		<script src="#{assets}js/bootstrap.min.js"></script>
+	</h:body>
+
+	<p:dialog widgetVar="statusDialog" header="Aguarde..." modal="true" showEffect="fade" hideEffect="explode" resizable="false" closable="false" style="background-color: #FFFFFF;">
+		<p:graphicImage value="./assets/img/loading.gif" styleClass="center"/>
+	</p:dialog>
+
+	<p:dialog widgetVar="dlRecuperarSenha" header="Recuperar Senha"
+		showEffect="fade" hideEffect="explode" dynamic="true"
+		resizable="false" modal="true" width="500">
+		<h:form>
+			<div class="row-fluid">
+				<div class="span12">
+					<label>E-mail</label>
+					<p:inputText value="#{loginController.email}" styleClass="span12" />
+				</div>
+			</div>
+			<br />
+			<div class="row-fluid">
+				<div class="span12">
+					<p:commandButton value="Enviar Senha"
+						action="#{loginController.recuperarSenha()}"
+						onclick="dlRecuperarSenha.close();" icon="ui-icon-mail-closed"
+						styleClass="span12" />
+				</div>
+			</div>
+		</h:form>
+	</p:dialog>
+</f:view>
+</html>

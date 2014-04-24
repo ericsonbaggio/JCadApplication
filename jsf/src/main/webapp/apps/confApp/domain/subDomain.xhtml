@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:pretty="http://ocpsoft.com/prettyfaces" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:of = "http://omnifaces.org/functions" >
+	
+	<h:form id="frmSubDomain">
+		<div class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="subName"> Nome: </label>
+				<div class="col-sm-10">
+					<p:inputText id="subName" value="#{domainController.subDomain.name}" placeholder="Nome" styleClass="col-xs-12 col-sm-10" />
+				</div>
+			</div>
+	
+			<div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="subIcone"> Ícone: </label>
+				<div class="col-sm-10">
+					<p:inputText id="subIcone" value="#{domainController.subDomain.icone}" placeholder="Ícone" styleClass="col-xs-12 col-sm-10" />
+				</div>
+			</div>
+	
+			<div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="subOrderObject"> Ordem: </label>
+				<div class="col-sm-10">
+					<p:spinner id="subOrderObject" value="#{domainController.subDomain.orderObject}" min="0" styleClass="spinner-input" placeholder="Ordem" />
+				</div>
+			</div>
+			
+			<br />
+			<div class="row center">
+				<p:commandButton icon="icon-plus" value="Adicionar" styleClass="btn btn-info" actionListener="#{domainController.closeSubDomain()}" update=":frm:dtSubDomain">
+					<p:collector value="#{domainController.subDomain}" addTo="#{domainController.model.subDomains}" />
+				</p:commandButton>
+			</div>
+		</div>
+	</h:form>
+</ui:composition>

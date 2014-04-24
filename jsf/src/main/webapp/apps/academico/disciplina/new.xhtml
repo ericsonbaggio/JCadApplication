@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition template="../../_includes/ui-layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:pretty="http://ocpsoft.com/prettyfaces" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:of = "http://omnifaces.org/functions" >
+	
+	<ui:param name="controller" value="#{disciplinaController}" />
+	
+	<ui:define name="title"> Nova Disciplina </ui:define>
+
+	<ui:define name="resourceName"> Disciplina </ui:define>
+	
+	<ui:define name="resourceDescription"> Nova Disciplina. </ui:define>
+
+	<ui:define name="designPage">
+		<ui:include src="../../_includes/_form.xhtml"/>
+	</ui:define>
+		
+	<ui:define name="content">
+		<style type="text/css">
+			.btn>[class*="icon-"] {
+				color: rgb(255, 255, 255) !important;
+			}
+		</style>
+		
+		<div class="tab-content no-border padding-24">
+			<div id="home" class="tab-pane in active">
+				<div class="row">
+					<div class="col-xs-12 col-sm-9">
+						<div class="form-horizontal">
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="nome"> Disciplina: </label>
+								<div class="col-sm-10">
+									<p:inputText id="nome" value="#{disciplinaController.model.nome}" maxlength="75" placeholder="Disciplina" styleClass="col-xs-12 col-sm-10" />
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="cargaHoraria"> Carga Horária: </label>
+								<div class="col-sm-10">
+									<p:inputText id="cargaHoraria" value="#{disciplinaController.model.cargaHoraria}" maxlength="100" placeholder="Disciplina" styleClass="col-xs-12 col-sm-10" />
+								</div>
+							</div>
+							
+							<div>
+								<p:pickList id="docentes" value="#{disciplinaController.docentesAptos}" styleClass="table table-striped table-bordered center"
+									var="docente" itemValue="#{docente}" converter="modelConverter"
+									itemLabel="#{docente.nomeCompleto}">  
+									<f:facet name="sourceCaption">Disponivel</f:facet>  
+										
+									<f:facet name="targetCaption">Adicionado</f:facet>
+								</p:pickList>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,77 @@
+/*
+ * *******************************************************************************************************************
+ * ***************************************************** Icones ******************************************************
+ * *******************************************************************************************************************
+ */
+.ui-icon-user {
+	background-image: url("../../icons/user.ico") !important;
+}
+
+.ui-icon-resource {
+	background-image: url("../../icons/resource.ico") !important;
+}
+
+/*
+ * *******************************************************************************************************************
+ * ************************************************* Componetes HTML *************************************************
+ * *******************************************************************************************************************
+ */
+.ui-widget-content {
+	border: none !important;
+	background: none !important;
+	color: none !important;
+}
+
+.ui-panel .ui-panel-content {
+	border: none !important;
+	background: none !important;
+	padding: 0 !important;
+}
+
+.ui-clock {
+	padding: 0 !important;
+}
+
+.ui-widget-header {
+	border: none !important;
+	background: none !important;
+	color: #8089a0 !important;
+	font-weight: normal !important;
+}
+
+.ui-tooltip {
+	width: 30px;
+}
+
+.ui-picklist .ui-button {
+	border: 5px solid rgb(255, 255, 255) !important;
+	border-radius: 0px !important;
+	margin: auto !important;
+	background-color: rgb(66, 139, 202) !important;
+}
+
+.ui-button-icon-only {
+	width: 2.0em !important;
+	height: 2.0em !important;
+}
+
+.ui-button-icon-only .ui-button-text {
+	padding: 0% !important !important;
+	display: block !important;
+}
+
+.ui-picklist-item {
+	color: rgb(255, 255, 255) !important;
+	background-color: rgb(171, 186, 195) !important;
+}
+
+.ui-spinner-button {
+	right: -18px !important;
+	background-color: #6fb3e0 !important;
+	border-radius: 0 !important;
+	font-size: 10px !important;
+	padding: 0 !important;
+	height: 15px !important;
+	line-height: 10px !important;
+	bottom: 0px !important;
+}

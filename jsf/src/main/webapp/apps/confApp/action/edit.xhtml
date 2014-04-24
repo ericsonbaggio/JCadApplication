@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition template="../../_includes/ui-layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:pretty="http://ocpsoft.com/prettyfaces" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:of = "http://omnifaces.org/functions" >
+	
+	<ui:param name="controller" value="#{actionController}" />
+	
+	<ui:define name="title"> CDA - Editar Ações </ui:define>
+
+	<ui:define name="resourceName"> Ação </ui:define>
+	
+	<ui:define name="resourceDescription"> CDA - Editar Ações. </ui:define>
+	
+	<ui:define name="designPage">
+		<ui:include src="../../_includes/_form.xhtml"/>
+	</ui:define>
+		
+	<ui:define name="content">
+		<style type="text/css">
+			.btn>[class*="icon-"] {
+				color: rgb(255, 255, 255) !important;
+			}
+		</style>
+	
+		<div class="tab-content no-border padding-24">
+			<div id="home" class="tab-pane in active">
+				<div class="row">
+					<div class="col-xs-12 col-sm-3 center">
+						<span class="profile-picture"> 
+							<img class="editable img-responsive" id="action" src="#{controller.contexPath()}imagens/action.ico" />
+						</span>
+					</div>
+
+					<div class="col-xs-12 col-sm-9">
+						<div class="form-horizontal">
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="name"> Nome: </label>
+								<div class="col-sm-10">
+									<p:inputText id="name" value="#{actionController.model.name}" maxlength="75" placeholder="Nome" styleClass="col-xs-12 col-sm-10" />
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="code"> Código: </label>
+								<div class="col-sm-10">
+									<p:inputText id="code" value="#{actionController.model.code}" maxlength="100" placeholder="Código" styleClass="col-xs-12 col-sm-10" />
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="icon"> Ícone: </label>
+								<div class="col-sm-10">
+									<p:inputText id="icon" value="#{actionController.model.icon}" maxlength="25" placeholder="Ícone" styleClass="col-xs-12 col-sm-10" />
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="classColor"> CSS Class Color: </label>
+								<div class="col-sm-10">
+									<p:inputText id="classColor" value="#{actionController.model.classColor}" maxlength="25" placeholder="CSS Class Color" styleClass="col-xs-12 col-sm-10" />
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="method"> Metódo: </label>
+								<div class="col-sm-10">
+									<p:inputText id="method" value="#{actionController.model.method}" maxlength="150" placeholder="Metódo" styleClass="col-xs-12 col-sm-10" />
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="updateComponent"> Update Component: </label>
+								<div class="col-sm-10">
+									<p:inputText id="updateComponent" value="#{actionController.model.updateComponent}" maxlength="25" placeholder="Update Component" styleClass="col-xs-12 col-sm-10" />
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="typeComponent"> Tipo do Componente: </label>
+								<div class="col-sm-10">
+									<h:selectOneMenu id="typeComponent" value="#{actionController.model.typeComponet}" styleClass="col-xs-12 col-sm-10">
+										<f:selectItem itemLabel="Selecione" itemValue="" />
+										<f:selectItems value="#{actionController.typeComponets}" var="tc" itemLabel="#{tc}" itemValue="#{tc}" />
+									</h:selectOneMenu>
+								</div>
+							</div>
+							
+							<br />
+							
+							<div class="row">
+								<h3 class="header smaller lighter blue">Parâmetros</h3>
+								
+								<div class="input-group">
+									<p:inputText value="#{actionController.actionParam.param}" styleClass="form-control input-mask-date" placeholder="f:setPropertyActionListener, f:param, ... "/>
+									<span class="input-group-btn">
+										<p:commandButton title="Adicionar" styleClass="btn btn-sm btn-default" icon="icon-plus bigger-110" action="#{actionController.addParam()}" update=":frm:dtParams" value=" "/>
+									</span>
+								</div>
+								
+								<br />
+								<p:dataTable id="dtParams" var="act" value="#{actionController.model.params}" emptyMessage="Sem Registros" styleClass="table-responsive col-xs-12" tableStyleClass="table table-striped table-bordered table-hover" >
+									<p:column headerText="Parâmetro" styleClass="col-sm-11">
+										#{act.param}
+									</p:column>
+									<p:column styleClass="col-sm-1 center">
+										<p:commandButton title="Remover" styleClass="btn btn-danger btn-xs" icon="icon-trash" action="#{actionController.removeParam()}" update=":frm" value=" ">
+											<f:setPropertyActionListener value="#{act}" target="#{actionController.actionParam}" />  
+										</p:commandButton>
+									</p:column>
+								</p:dataTable>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>

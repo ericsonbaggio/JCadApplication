@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition template="../../_includes/ui-layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:pretty="http://ocpsoft.com/prettyfaces" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:of = "http://omnifaces.org/functions" >
+	
+	<ui:param name="controller" value="#{resourceController}" />
+	
+	<ui:define name="title"> CDA - Páginas do Recurso </ui:define>
+
+	<ui:define name="resourceName"> Páginas do Recurso </ui:define>
+	
+	<ui:define name="resourceDescription"> CDA - Páginas do Recurso. </ui:define>
+	
+	<ui:define name="designPage">
+		<ui:include src="../../_includes/_form.xhtml"/>
+	</ui:define>
+	
+	<ui:define name="content">
+		<style type="text/css">
+			.btn>[class*="icon-"] {
+				color: rgb(255, 255, 255) !important;
+			}
+		</style>
+		
+		<div class="row">
+			<div class="row col-sm-12">
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="codeFile"> Código: </label>
+						<div class="col-sm-9">
+							<p:inputText id="codeFile" styleClass="col-xs-12 col-sm-10" value="#{resourceController.page.codeFile}" readonly="true"/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="file"> Página: </label>
+						<div class="col-sm-9">
+							<p:inputText id="file" styleClass="col-xs-12 col-sm-10" value="#{resourceController.page.file}" readonly="true"/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="cbxActions"> Selecione uma ação: </label>
+						<div class="col-sm-9">
+							<h:selectOneMenu id="cbxActions" value="#{resourceController.actionPage}" styleClass="col-xs-12 col-sm-10">
+								<f:selectItems itemValue="#{act}" itemLabel="#{act.code} - #{act.name}" value="#{resourceController.actionsPage}" var="act"/>
+							</h:selectOneMenu>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row center">
+					<p:commandButton icon="icon-plus" value="Adicionar Ação" styleClass="btn btn-info" update="dtActions">
+						<p:collector value="#{resourceController.actionPage}" addTo="#{resourceController.page.actionsOfPages}" />
+					</p:commandButton>
+				</div>
+				
+				<br />
+				<p:dataTable id="dtActions" var="act" value="#{resourceController.page.actionsOfPages}" emptyMessage="Sem Registros" styleClass="table-responsive col-xs-12"
+					tableStyleClass="table table-striped table-bordered table-hover">
+					<p:column headerText="Ação" styleClass="col-sm-11">
+						#{act.code} - #{act.name}
+					</p:column>
+					<p:column styleClass="col-sm-1 center">
+						<p:commandButton title="Remover" styleClass="btn btn-danger btn-xs" icon="icon-trash" update=":frm" value="">
+							<p:collector value="#{act}" removeFrom="#{resourceController.page.actionsOfPages}" />
+						</p:commandButton>
+					</p:column>
+				</p:dataTable>
+			</div>
+		</div>
+	</ui:define>
+	
+</ui:composition>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition template="../../_includes/ui-layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:pretty="http://ocpsoft.com/prettyfaces" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:of = "http://omnifaces.org/functions" >
+	
+	<ui:param name="controller" value="#{userController}" />
+	
+	<ui:define name="title"> CDA - Visualizar Usuário </ui:define>
+
+	<ui:define name="resourceName"> Usuário </ui:define>
+	
+	<ui:define name="resourceDescription"> CDA - Visualizar Usuário. </ui:define>
+	
+	<ui:define name="designPage">
+		<ui:include src="../../_includes/_form.xhtml"/>
+	</ui:define>
+	
+	<ui:define name="content">
+		<style type="text/css">
+			.btn>[class*="icon-"] {
+				color: rgb(255, 255, 255) !important;
+			}
+			
+			.ui-datatable thead th, .ui-datatable tbody td, .ui-datatable tfoot td {
+				overflow: visible !important;
+			}
+		</style>
+		
+		<div class="row">
+			<div class="col-xs-12 col-sm-3 center">
+				<span class="profile-picture"> 
+					<img class="editable img-responsive" alt="Alex's Avatar" id="avatar2" src="#{userController.contexPath()}imagens/user.ico" />
+				</span>
+			</div>
+			
+			<div class="col-xs-12 col-sm-9">
+				<h4 class="blue">
+					<span class="middle">#{userController.model.name}</span>
+				</h4>
+	
+				<div class="profile-user-info">
+					<div class="profile-info-row">
+						<div class="profile-info-name">KeyUser</div>
+	
+						<div class="profile-info-value">
+							<span>#{userController.model.keyUser}</span>
+						</div>
+					</div>
+	
+					<div class="profile-info-row">
+						<div class="profile-info-name">E-mail</div>
+	
+						<div class="profile-info-value">
+							<span>#{userController.model.email}</span>
+						</div>
+					</div>
+	
+					<div class="profile-info-row">
+						<div class="profile-info-name">Situação</div>
+	
+						<div class="profile-info-value">
+							<span>
+								<c:if test="#{userController.model.active}">
+									Ativo
+								</c:if>
+								
+								<c:if test="#{!userController.model.active}">
+									Inativo
+								</c:if>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>

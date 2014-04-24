@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html>
+<html lang="pt-BR" 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pretty="http://ocpsoft.com/prettyfaces"
+	xmlns:of = "http://omnifaces.org/functions">
+
+<f:view contentType="text/html">
+	<h:head>
+		<f:facet name="first">
+			<meta charset="utf-8" />
+			<title> <ui:insert name="title"/> </title>
+			<meta name="description" content="overview &amp; stats" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		</f:facet>
+		
+		<!-- Link para a pasta assets -->
+		<pretty:urlbuffer  var="apps" mappingId="apps" />
+		<pretty:urlbuffer  var="assets" mappingId="assets" />
+		<pretty:urlbuffer  var="pages" mappingId="pages" />
+
+		<!-- CSS -->
+		<link type="text/css" rel="stylesheet" href="#{assets}css/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="#{assets}css/font-awesome.min.css" />
+		<link type="text/css" rel="stylesheet" href="#{assets}css/primefaces.css" />
+
+		<!--[if IE 7]>
+			<link type="text/css" rel="stylesheet" href="#{assets}css/font-awesome-ie7.min.css" />
+		<![endif]-->
+		
+		<!-- page specific plugin styles -->
+		<!-- fonts -->
+		<link type="text/css" rel="stylesheet" href="#{assets}css/ace-fonts.css" />
+		
+		<!-- ace styles -->
+		<link type="text/css" rel="stylesheet" href="#{assets}css/ace.min.css" />
+		<link type="text/css" rel="stylesheet" href="#{assets}css/ace-rtl.min.css" />
+		<link type="text/css" rel="stylesheet" href="#{assets}css/ace-skins.min.css" />
+		
+		<!--[if lte IE 8]>
+			<link type="text/css" rel="stylesheet" href="#{assets}css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+		<!-- ace settings handler -->
+		<script src="#{assets}js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="#{assets}js/html5shiv.js"></script>
+		<script src="#{assets}js/respond.min.js"></script>
+		<![endif]-->
+	</h:head>
+
+	<h:body>
+		<!-- navbar -->
+		<div class="navbar navbar-default" id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left">
+					<a href="#" class="navbar-brand">
+						<small>
+							<i class="icon-leaf"></i>
+							CAD
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="#{assets}avatars/user.jpg" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>Welcome,</small>
+									Jason
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="#">
+										<i class="icon-cog"></i>
+										Settings
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-user"></i>
+										Profile
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="#">
+										<i class="icon-off"></i>
+										Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+		
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+						<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+							<button class="btn btn-success">
+								<i class="icon-desktop"></i>
+							</button>
+
+							<button class="btn btn-info">
+								<i class="icon-edit"></i>
+							</button>
+
+							<button class="btn btn-warning">
+								<i class="icon-group"></i>
+							</button>
+
+							<button class="btn btn-danger">
+								<i class="icon-cogs"></i>
+							</button>
+						</div>
+
+						<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+							<span class="btn btn-success"></span>
+
+							<span class="btn btn-info"></span>
+
+							<span class="btn btn-warning"></span>
+
+							<span class="btn btn-danger"></span>
+						</div>
+					</div><!-- #sidebar-shortcuts -->
+					
+					<!-- nav-list -->
+					<ui:include src="../../apps/_includes/nav-list.xhtml"/>
+					<!-- /.nav-list -->
+					
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+					
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<ul class="breadcrumb">
+							<p:clock pattern="dd/MM/yyyy HH:mm:ss" />
+						</ul><!-- .breadcrumb -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								<ui:insert name="resourceName"/> 
+								<small>
+									<i class="icon-double-angle-right"></i>
+									<ui:insert name="resourceDescription"/> 
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-sm-12">
+								<!-- PAGE CONTENT BEGINS -->
+									<h:form id="frm" prependId="false">
+										<p:messages id="msg" autoUpdate="true" closable="false"/>
+										<ui:insert name="content"/>
+									</h:form>
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+
+		<!-- basic scripts -->
+		<script src="#{assets}js/bootstrap.min.js"></script>
+		<script src="#{assets}js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="#{assets}js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="#{assets}js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="#{assets}js/jquery.ui.touch-punch.min.js"></script>
+		<script src="#{assets}js/jquery.slimscroll.min.js"></script>
+		<script src="#{assets}js/jquery.easy-pie-chart.min.js"></script>
+		<script src="#{assets}js/jquery.sparkline.min.js"></script>
+		<script src="#{assets}js/flot/jquery.flot.min.js"></script>
+		<script src="#{assets}js/flot/jquery.flot.pie.min.js"></script>
+		<script src="#{assets}js/flot/jquery.flot.resize.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="#{assets}js/ace-elements.min.js"></script>
+		<script src="#{assets}js/ace.min.js"></script>
+	</h:body>
+</f:view>
+</html>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition template="../../_includes/ui-layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:pretty="http://ocpsoft.com/prettyfaces" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:of = "http://omnifaces.org/functions" >
+	
+	<ui:param name="controller" value="#{groupController}" />
+	
+	<ui:define name="title"> CDA - Cadastro de Grupo </ui:define>
+
+	<ui:define name="resourceName"> Grupo </ui:define>
+	
+	<ui:define name="resourceDescription"> CDA - Cadastro de Grupo. </ui:define>
+	
+	<ui:define name="designPage">
+		<ui:include src="../../_includes/_form.xhtml"/>
+	</ui:define>
+		
+	<ui:define name="content">
+		<style type="text/css">
+			.btn>[class*="icon-"] {
+				color: rgb(255, 255, 255) !important;
+			}
+			
+			.ui-chkbox-icon {
+				width: 15px;
+			}
+			
+			.ui-chkbox-box {
+				position: relative;
+				background-image: -webkit-gradient(
+					linear,
+					right top,
+					right bottom,
+					color-stop(0, #B3B9BD),
+					color-stop(1, #5D6163)
+				);
+				background-image: -o-linear-gradient(bottom, #B3B9BD 0%, #5D6163 100%);
+				background-image: -moz-linear-gradient(bottom, #B3B9BD 0%, #5D6163 100%);
+				background-image: -webkit-linear-gradient(bottom, #B3B9BD 0%, #5D6163 100%);
+				background-image: -ms-linear-gradient(bottom, #B3B9BD 0%, #5D6163 100%);
+				background-image: linear-gradient(to bottom, #B3B9BD 0%, #5D6163 100%);
+			}
+			
+			.ui-tree .ui-treenode { 
+				margin-top: 4px;
+			}
+			
+			.ui-tree-container {
+				background-image: -webkit-gradient(
+					linear,
+					right top,
+					right bottom,
+					color-stop(0.13, #BFC4C7),
+					color-stop(0.55, #A4ABB0)
+				);
+				background-image: -o-linear-gradient(bottom, #BFC4C7 13%, #A4ABB0 55%);
+				background-image: -moz-linear-gradient(bottom, #BFC4C7 13%, #A4ABB0 55%);
+				background-image: -webkit-linear-gradient(bottom, #BFC4C7 13%, #A4ABB0 55%);
+				background-image: -ms-linear-gradient(bottom, #BFC4C7 13%, #A4ABB0 55%);
+				background-image: linear-gradient(to bottom, #BFC4C7 13%, #A4ABB0 55%);
+				-moz-border-radius: 6px; /* Para Firefox */
+				-webkit-border-radius: 6px; /*Para Safari e Chrome */
+				border-radius: 6px; /* Para Opera 10.5+*/
+			}
+			
+			.ui-tree-toggler {
+				position: relative;
+			}
+			
+			.ui-tree .ui-chkbox-box {
+				width: 19px;
+				height: 19px;
+			}
+			
+			.ui-tree .ui-treenode-label {
+				margin-top: 0px;
+				margin-left: 2px;
+			}
+		</style>
+	
+		<div class="tab-content no-border padding-24">
+			<div id="home" class="tab-pane in active">
+				<div class="row">
+					<div class="col-xs-12 col-sm-3 center">
+						<span class="profile-picture"> 
+							<img class="editable img-responsive" alt="Alex's Avatar" id="avatar2" src="#{groupController.contexPath()}imagens/group.ico" />
+						</span>
+					</div>
+
+					<div class="col-xs-12 col-sm-9">
+						<div class="tabbable">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<a data-toggle="tab" href="#group">
+										Grupo
+									</a>
+								</li>
+
+								<li>
+									<a data-toggle="tab" href="#users">
+										Usuários
+									</a>
+								</li>
+
+								<li>
+									<a data-toggle="tab" href="#permissions">
+										Permissões
+									</a>
+								</li>
+							</ul>
+							
+							<div class="tab-content">
+								<div id="group" class="tab-pane in active">
+									<div class="form-horizontal">
+										<div class="form-group">
+											<label class="col-sm-2 control-label no-padding-right" for="name"> Nome: </label>
+											<div class="col-sm-10">
+												<p:inputText id="name" value="#{groupController.model.name}" placeholder="Nome" styleClass="col-xs-12 col-sm-10" />
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-sm-2 control-label no-padding-right" for="description"> Descrição: </label>
+											<div class="col-sm-10">
+												<p:inputTextarea id="description" rows="8" value="#{groupController.model.description}" placeholder="Descrição" styleClass="col-xs-12 col-sm-10" />
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div id="users" class="tab-pane">
+									<p:pickList id="pklResource" styleClass="table table-striped table-bordered center" 
+										value="#{groupController.userGroup}" var="user" itemLabel="#{user.name}" itemValue="#{user}" converter="modelConverter">
+										<f:facet name="sourceCaption">Disponivel</f:facet>  
+									
+										<f:facet name="targetCaption">Adicionado</f:facet>
+									</p:pickList>
+								</div>
+								
+								<div id="permissions" class="tab-pane">
+									<div class="row">
+										<p:tree value="#{groupController.root}" selectionMode="checkbox" var="no" expanded="true" expandAnim="FADE_IN" collapseAnim="FADE_OUT"
+											selection="#{groupController.nosSelecionados}" propagateSelectionUp="true" propagateSelectionDown="true" styleClass="col-sm-12">
+											<p:treeNode>
+												<h:outputText value="#{no.name}" style="margin-left: 10px;" />
+											</p:treeNode>
+										</p:tree>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>

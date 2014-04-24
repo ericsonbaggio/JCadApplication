@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pretty-config xmlns="http://ocpsoft.com/prettyfaces/3.3.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://ocpsoft.com/prettyfaces/3.3.0 http://ocpsoft.com/xml/ns/prettyfaces/ocpsoft-pretty-faces-3.3.0.xsd">
+
+	<url-mapping id="apps">
+		<pattern value="/apps/" />
+		<view-id value="/apps/" />
+	</url-mapping>
+	
+	<url-mapping id="assets">
+		<pattern value="/assets/" />
+		<view-id value="/assets/" />
+	</url-mapping>
+	
+	<url-mapping id="pages">
+		<pattern value="/pages/" />
+		<view-id value="/pages/" />
+	</url-mapping>
+	
+	<url-mapping id="accessDenied">
+		<pattern value="/accessDenied" />
+		<view-id value="/apps/accessDenied.jsf" />
+	</url-mapping>
+	
+	<url-mapping id="notPermission">
+		<pattern value="/pages/notPermission" />
+		<view-id value="/pages/error/redirect-notpermission.jsf" />
+	</url-mapping>
+</pretty-config>

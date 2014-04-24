@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition template="../../_includes/ui-layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:pretty="http://ocpsoft.com/prettyfaces" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:of = "http://omnifaces.org/functions" >
+	
+	<ui:param name="controller" value="#{domainController}" />
+	
+	<ui:define name="title"> CDA - Cadastro de Domínio </ui:define>
+
+	<ui:define name="resourceName"> Domínio </ui:define>
+	
+	<ui:define name="resourceDescription"> CDA - Cadastro de Domínio. </ui:define>
+	
+	<ui:define name="designPage">
+		<ui:include src="../../_includes/_form.xhtml"/>
+	</ui:define>
+		
+	<ui:define name="content">
+		<style type="text/css">
+			.btn>[class*="icon-"] {
+				color: rgb(255, 255, 255) !important;
+			}
+		
+			.ui-dialog {
+				border: rgb(255, 255, 255) !important; 
+				background: rgb(255, 255, 255) !important; 
+			}
+		</style>
+	
+		<div class="tab-content no-border padding-24">
+			<div id="home" class="tab-pane in active">
+				<div class="row">
+					<div class="col-xs-12 col-sm-3 center">
+						<span class="profile-picture"> 
+							<img class="editable img-responsive" alt="Alex's Avatar" id="avatar2" src="#{domainController.contexPath()}imagens/domain.ico" />
+						</span>
+					</div>
+
+					<div class="col-xs-12 col-sm-9">
+						<div class="tabbable">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<a data-toggle="tab" href="#domain">
+										Domínio
+									</a>
+								</li>
+
+								<li>
+									<a data-toggle="tab" href="#subDomains">
+										Subdomínios
+									</a>
+								</li>
+							</ul>
+							
+							<div class="tab-content">
+								<div id="domain" class="tab-pane in active">
+									<div class="form-horizontal">
+										<div class="form-group">
+											<label class="col-sm-2 control-label no-padding-right" for="name"> Nome: </label>
+											<div class="col-sm-10">
+												<p:inputText id="name" value="#{domainController.model.name}" placeholder="Nome" styleClass="col-xs-12 col-sm-10" />
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-sm-2 control-label no-padding-right" for="icone"> Ícone: </label>
+											<div class="col-sm-10">
+												<p:inputText id="icone" value="#{domainController.model.icone}" placeholder="Ícone" styleClass="col-xs-12 col-sm-10" />
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-sm-2 control-label no-padding-right" for="orderObject"> Ordem: </label>
+											<div class="col-sm-10">
+												<p:spinner id="orderObject" value="#{domainController.model.orderObject}" min="0" styleClass="spinner-input" placeholder="Ordem"/>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div id="subDomains" class="tab-pane">
+									<div class="row center">
+										<p:commandButton icon="icon-plus" value="Adicionar Subdomínio" styleClass="btn btn-info" actionListener="#{domainController.viewAddSubDomain()}"/>
+									</div>
+									
+									<br />
+									
+									<div class="row">
+										<p:dataTable id="dtSubDomain" var="sub" value="#{domainController.model.subDomains}" emptyMessage="Sem Registros" styleClass="table-responsive col-xs-12" tableStyleClass="table table-striped table-bordered table-hover" >
+											<p:column headerText="Nome" styleClass="col-sm-11">
+												#{sub.name}
+											</p:column>
+											
+											<p:column styleClass="col-sm-1 center">
+												<p:commandButton title="Remover" styleClass="btn btn-danger btn-xs" icon="icon-trash" update=":frm:dtSubDomain" value="">
+													<p:collector value="#{sub}" removeFrom="#{domainController.model.subDomains}" />
+												</p:commandButton>
+											</p:column>
+										</p:dataTable>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+	
+	<ui:define name="dialogs">	
+		<p:dialog id="dlSubDomain" widgetVar="dlSubDomain" draggable="false" resizable="false" modal="true" width="500px">
+			<ui:include src="./subDomain.xhtml"></ui:include>
+		</p:dialog>
+	</ui:define>
+</ui:composition>

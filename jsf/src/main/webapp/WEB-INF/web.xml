@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+						http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	
+	<display-name>JCadApp</display-name>
+	<context-param>
+		<param-name>javax.faces.PROJECT_STAGE</param-name>
+		<param-value>Production</param-value>
+	</context-param>
+	
+
+	<!-- Filtro para Login -->
+	<!--  -->
+	<filter> 
+		<filter-name>LoginFilter</filter-name> 
+		<filter-class>br.cad.filter.LoginFilter</filter-class> 
+	</filter> 
+	
+	<filter-mapping> 
+		<filter-name>LoginFilter</filter-name> 
+		<url-pattern>*.jsf</url-pattern> 
+		<url-pattern>/*</url-pattern> 
+	</filter-mapping>
+	<!-- /// -->
+	
+	
+	<!-- Pretty Faces -->
+	<context-param>
+		<param-name>com.ocpsoft.pretty.DEVELOPMENT</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>com.ocpsoft.pretty.BASE_PACKAGES</param-name>
+		<param-value>br.cad.controller,com.ocpsoft</param-value>
+	</context-param>
+	
+	<filter>
+		<filter-name>Pretty Filter</filter-name>
+		<filter-class>com.ocpsoft.pretty.PrettyFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>Pretty Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+	</filter-mapping>
+	<!-- /// -->
+	
+
+	<!-- Configuracoes do Banco de Dados -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+	<!-- /// -->
+	
+	
+	<!-- Tema do Primefaces -->
+	<!-- 
+	<context-param> 
+		<param-name>primefaces.THEME</param-name> 
+		<param-value>nome</param-value> 
+	</context-param>
+	--> 
+	<!-- /// -->
+
+
+	<!-- Filtro para FileUpload com PrimeFaces -->
+	<filter>
+		<filter-name>PrimeFaces FileUpload Filter</filter-name>
+		<filter-class>org.primefaces.webapp.filter.FileUploadFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>PrimeFaces FileUpload Filter</filter-name>
+		<servlet-name>Faces Servlet</servlet-name>
+	</filter-mapping>
+	<!-- /// -->
+
+	<!-- Filtro para o Hibernate -->
+	<filter>
+		<filter-name>HibernateFilter</filter-name>
+		<filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>HibernateFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>HibernateFilter</filter-name>
+		<url-pattern>/faces/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>HibernateFilter</filter-name>
+		<url-pattern>/report</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>HibernateFilter</filter-name>
+		<url-pattern>*.jsf</url-pattern>
+	</filter-mapping>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	<filter>
+		<filter-name>requestContextFilter</filter-name>
+		<filter-class>org.springframework.web.filter.RequestContextFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>requestContextFilter</filter-name>
+		<url-pattern>*.jsf</url-pattern>
+	</filter-mapping>
+	<!-- /// -->
+
+	<!-- Filtro que desabilita o cache -->
+	<filter>
+		<filter-name>NoCacheFilter</filter-name>
+		<filter-class>br.cad.util.NoCacheFilter</filter-class>
+	</filter>
+	<!-- /// -->
+	
+	<!-- Padroes JSF -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.jsf</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.jsf</welcome-file>
+	</welcome-file-list>
+	
+	<!-- Java Server Faces Servlet -->
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<!-- Java Server Faces Servlet Mapping -->
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+	</servlet-mapping>
+	<!-- /// -->
+	
+	<!-- Configuração do tempo da sessao -->
+	<session-config>
+		<session-timeout>
+			15
+		</session-timeout>
+	</session-config>
+	
+	<!-- Paginas de ERRO -->
+	<error-page>
+		<exception-type>javax.faces.application.ViewExpiredException</exception-type>
+		<location>/apps/login.jsf?expired=true</location>
+	</error-page>
+	
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/pages/error/redirect-error.jsf</location>
+	</error-page>
+	
+	<error-page>
+		<exception-type>java.lang.SecurityException</exception-type>
+		<location>/apps/login.jsf?expired=true</location>
+	</error-page>
+
+	<error-page>
+		<error-code>403</error-code>
+		<location>/pages/error/redirect-forbidden.jsf</location>
+	</error-page>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/pages/error/redirect-notfound.jsf</location>
+	</error-page>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/pages/error/redirect-error.jsf</location>
+	</error-page>
+
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/pages/error/redirect-error.jsf</location>
+	</error-page>
+	
+	<error-page>
+		<exception-type>java.lang.IllegalStateException</exception-type>
+		<location>/</location>
+	</error-page>
+</web-app>
