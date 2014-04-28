@@ -3,3 +3,8 @@ ejb/target/*/*.*
 jsf/target/*/*.*
 grails/target/*/*.*
 grails/target-eclipse/*/*.*
+
+ear/.settings/*.*
+ejb/.settings/*.*
+jsf/.settings/*.*
+grails/.settings/*.*
