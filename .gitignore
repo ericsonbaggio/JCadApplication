@@ -4,8 +4,8 @@ jsf/target/*/*.*
 grails/target/*/*.*
 grails/target-eclipse/*/*.*
 
-.settings/*.*
-ear/.settings/*.*
-ejb/.settings/*.*
-jsf/.settings/*.*
-grails/.settings/*.*
+.settings/*
+ear/.settings/*
+ejb/.settings/*
+jsf/.settings/*
+grails/.settings/*
