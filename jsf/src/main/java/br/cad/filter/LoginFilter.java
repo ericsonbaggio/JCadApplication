@@ -128,6 +128,11 @@ public class LoginFilter implements Filter, Serializable {
 			return false;
 		}
 		
+		if (paginaAcessada.startsWith(contextPath + "webservice")) {
+			// Nao precisa de login
+			return false;
+		}
+		
 		if (paginaAcessada.startsWith(contextPath + "/")) {
 			if (request.getSession().getAttribute("userLogged") == null)
 				return true;
