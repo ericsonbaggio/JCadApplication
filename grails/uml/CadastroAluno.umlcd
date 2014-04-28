@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_NWza0CBsEeONzZoWF3LimQ">
+  <modelElement href="CadastroAluno.uml#_wx72sCBsEeONzZoWF3LimQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_xFQbUSBsEeONzZoWF3LimQ" targetItem="_xFUswCBsEeONzZoWF3LimQ" sourceItem="_xFQbUCBsEeONzZoWF3LimQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_xFUFsCBsEeONzZoWF3LimQ" sourceAnchor="297.0,46.0" targetAnchor="0.0,41.0" target="_W9INICByEeONzZoWF3LimQ" source="_xFUswCBsEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_w9aG4CBsEeONzZoWF3LimQ"/>
+    <stereotypes xmi:id="_xFUFsSBsEeONzZoWF3LimQ" name="Reference">
+      <modelElement href="CadastroAluno.uml#_w9-HkCBsEeONzZoWF3LimQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_xFUFsiBsEeONzZoWF3LimQ" text="">
+      <visualProperties xmi:id="_XCE-kCByEeONzZoWF3LimQ" position="-20.0,-19.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_xFUFsyBsEeONzZoWF3LimQ" aggregationKind="NONE" name="">
+      <modelElement href="CadastroAluno.uml#_w9aG4SBsEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="_XCDJYCByEeONzZoWF3LimQ" position="14.0,-47.0"/>
+      <visibility xmi:id="_xFUFtCBsEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_xFUFtSBsEeONzZoWF3LimQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_xFUFtiBsEeONzZoWF3LimQ" aggregationKind="NONE" name="usuario" navigable="true">
+      <modelElement href="CadastroAluno.uml#_w9OgsCBsEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="_XCFloCByEeONzZoWF3LimQ" position="-91.0,2.0"/>
+      <stereotypes xmi:id="_CyGeQCByEeONzZoWF3LimQ" name="LegacyStyledElement">
+        <modelElement href="CadastroAluno.uml#_w9PHwCBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_xFUFtyBsEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_xFUFuCBsEeONzZoWF3LimQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_0FAxASBsEeONzZoWF3LimQ" targetItem="_0FFpgCBsEeONzZoWF3LimQ" sourceItem="_0FAxACBsEeONzZoWF3LimQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_0FB_ICBsEeONzZoWF3LimQ" sourceAnchor="148.0,0.0" targetAnchor="120.0,137.0" superClass="_0FFpgCBsEeONzZoWF3LimQ" subClass="_xFUswCBsEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_w72AoCBsEeONzZoWF3LimQ"/>
+    <bendpoints xmi:id="_OfZVYCB-EeONzZoWF3LimQ" sourceY="-30" targetX="-249" targetY="35"/>
+    <bendpoints xmi:id="_OfZ8cCB-EeONzZoWF3LimQ" sourceX="249" sourceY="-30" targetY="35"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_2jPG8SBsEeONzZoWF3LimQ" targetItem="_2jRjMCBsEeONzZoWF3LimQ" sourceItem="_2jPG8CBsEeONzZoWF3LimQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_2jPuACBsEeONzZoWF3LimQ" sourceAnchor="115.0,0.0" targetAnchor="72.0,97.0" dashed="true" superClass="_2jRjMCBsEeONzZoWF3LimQ" subClass="_0FFpgCBsEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_z_W08SBsEeONzZoWF3LimQ"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_W88m8CByEeONzZoWF3LimQ" sourceAnchor="188.0,0.0" targetAnchor="120.0,137.0" superClass="_0FFpgCBsEeONzZoWF3LimQ" subClass="_W9INICByEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_WyC-gCByEeONzZoWF3LimQ"/>
+    <bendpoints xmi:id="_OfajgCB-EeONzZoWF3LimQ" sourceY="-35" targetX="287" targetY="35"/>
+    <bendpoints xmi:id="_OfbKkCB-EeONzZoWF3LimQ" sourceX="-287" sourceY="-35" targetY="35"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_W88m8iByEeONzZoWF3LimQ" sourceAnchor="100.0,150.0" targetAnchor="350.0,0.0" targetItem="_W9INICByEeONzZoWF3LimQ" sourceItem="_W88m8SByEeONzZoWF3LimQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_W9HmECByEeONzZoWF3LimQ" target="_W9INICByEeONzZoWF3LimQ" source="_RIuvICB-EeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_W1f7ISByEeONzZoWF3LimQ"/>
+    <visualProperties xmi:id="_RIuvJCB-EeONzZoWF3LimQ" position="815.0,534.0"/>
+    <nameVisual xmi:id="_W9HmESByEeONzZoWF3LimQ" text=""/>
+    <sourceRole xmi:id="_W9HmEiByEeONzZoWF3LimQ" name="grupos" navigable="true">
+      <modelElement href="CadastroAluno.uml#_W1WKISByEeONzZoWF3LimQ"/>
+      <visibility xmi:id="_W9HmEyByEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_W9HmFCByEeONzZoWF3LimQ" label="1..*" max="-1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_W9HmFSByEeONzZoWF3LimQ" aggregationKind="NONE" name="">
+      <modelElement href="CadastroAluno.uml#_W1fUESByEeONzZoWF3LimQ"/>
+      <visibility xmi:id="_W9HmFiByEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_W9HmFyByEeONzZoWF3LimQ" label="1..*" max="-1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_4SOwoCByEeONzZoWF3LimQ" sourceAnchor="86.0,0.0" targetAnchor="148.0,92.0" superClass="_xFUswCBsEeONzZoWF3LimQ" subClass="_4SRz8CByEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_4MWLECByEeONzZoWF3LimQ"/>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_xFQbUCBsEeONzZoWF3LimQ" sourceConnectionVisual="_xFQbUSBsEeONzZoWF3LimQ" text="Classe responsavel pelo papel de cada pessoa tipo Aluno, professor e etc...&#xD;&#xA;&#xD;&#xA;@author WilliamRodrigues &lt;br>&#xD;&#xA;        william.rodrigues@live.fae.edu&#xD;&#xA; *" item="_xFUswCBsEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_w9WcgCBsEeONzZoWF3LimQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_0FAxACBsEeONzZoWF3LimQ" sourceConnectionVisual="_0FAxASBsEeONzZoWF3LimQ" text="Classe base para modelos de negócio Implementa Mapeamento para Id utilizando&#xD;&#xA;a estratégia Identity Implementa os métodos toString, clone e equals.&#xD;&#xA;&#xD;&#xA;@author WilliamRodrigues&#xD;&#xA; *" item="_0FFpgCBsEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_0BLZ4CBsEeONzZoWF3LimQ"/>
+    <visualProperties xmi:id="_O8jLcCB-EeONzZoWF3LimQ" position="669.0,203.0" size="200.0,150.0" visible="false"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_2jPG8CBsEeONzZoWF3LimQ" sourceConnectionVisual="_2jPG8SBsEeONzZoWF3LimQ" text="&#xD;&#xA;@author WilliamRodrigues&#xD;&#xA; *" item="_2jRjMCBsEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_2foZUCBsEeONzZoWF3LimQ"/>
+    <visualProperties xmi:id="_jeUc0CByEeONzZoWF3LimQ" position="759.0,48.0" size="200.0,150.0" visible="false"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_xFUswCBsEeONzZoWF3LimQ" comments="_xFQbUCBsEeONzZoWF3LimQ" targetConnectionVisual="_xFQbUSBsEeONzZoWF3LimQ" name="PessoaPapel" abstractClass="true" associationsOut="_xFUFsCBsEeONzZoWF3LimQ" generalizations="_0FB_ICBsEeONzZoWF3LimQ" subclassedBy="_4SOwoCByEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_wyOxoCBsEeONzZoWF3LimQ"/>
+    <visualProperties xmi:id="_xFUswSBsEeONzZoWF3LimQ" position="131.0,385.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_xFUswiBsEeONzZoWF3LimQ" name="Table">
+      <modelElement href="CadastroAluno.uml#_wyScACBsEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="_imOXMCByEeONzZoWF3LimQ" visible="false"/>
+    </stereotypes>
+    <stereotypes xmi:id="_xFUswyBsEeONzZoWF3LimQ" name="InheritanceMapping">
+      <modelElement href="CadastroAluno.uml#_wy1OkCBsEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="_imOXMSByEeONzZoWF3LimQ" visible="false"/>
+    </stereotypes>
+    <stereotypes xmi:id="_xFUsxCBsEeONzZoWF3LimQ" name="JPA1StyledElement">
+      <modelElement href="CadastroAluno.uml#_wy2csCBsEeONzZoWF3LimQ"/>
+    </stereotypes>
+    <stereotypes xmi:id="_xFUsxSBsEeONzZoWF3LimQ" name="TechnicalSupplement">
+      <modelElement href="CadastroAluno.uml#_wy5gACBsEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="_hSk-ACByEeONzZoWF3LimQ" visible="false"/>
+    </stereotypes>
+    <visibility xmi:id="_xFUsxiBsEeONzZoWF3LimQ" label="+"/>
+    <attributes xmi:id="_xFUsxyBsEeONzZoWF3LimQ" name="nomeCompleto">
+      <modelElement href="CadastroAluno.uml#_w78uUCBsEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_xFUsyCBsEeONzZoWF3LimQ" name="NotNull">
+        <modelElement href="CadastroAluno.uml#_w798cCBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_xFUsySBsEeONzZoWF3LimQ" name="Column">
+        <modelElement href="CadastroAluno.uml#_w8h9ICBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_xFUsyiBsEeONzZoWF3LimQ" name="Size">
+        <modelElement href="CadastroAluno.uml#_w8ikMCBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_xFUsyyBsEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_xFUszCBsEeONzZoWF3LimQ" label="1" max="1" min="1"/>
+      <type xmi:id="_xFUszSBsEeONzZoWF3LimQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_xFUsziBsEeONzZoWF3LimQ" name="nomeAbreviado">
+      <modelElement href="CadastroAluno.uml#_w8kZYCBsEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_xFUszyBsEeONzZoWF3LimQ" name="Column">
+        <modelElement href="CadastroAluno.uml#_w9LdYCBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_xFUs0CBsEeONzZoWF3LimQ" name="Size">
+        <modelElement href="CadastroAluno.uml#_w9MEcCBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_xFUs0SBsEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_xFUs0iBsEeONzZoWF3LimQ" label="1" max="1" min="1"/>
+      <type xmi:id="_xFUs0yBsEeONzZoWF3LimQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_xFUs1CBsEeONzZoWF3LimQ" name="usuario">
+      <modelElement href="CadastroAluno.uml#_w9OgsCBsEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_xFUs1iBsEeONzZoWF3LimQ" name="LegacyStyledElement">
+        <modelElement href="CadastroAluno.uml#_w9PHwCBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_CyLWwCByEeONzZoWF3LimQ" name="LegacyStyledElement">
+        <modelElement href="CadastroAluno.uml#_w9PHwCBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_xFUs1yBsEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_xFUs2CBsEeONzZoWF3LimQ" label="1" max="1" min="1"/>
+      <type xmi:id="_xFUs2SBsEeONzZoWF3LimQ" name="Usuario">
+        <modelElement href="CadastroAluno.uml#_w7BhQSBsEeONzZoWF3LimQ"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_2jRjMCBsEeONzZoWF3LimQ" comments="_2jPG8CBsEeONzZoWF3LimQ" targetConnectionVisual="_2jPG8SBsEeONzZoWF3LimQ" name="Model" subclassedBy="_2jPuACBsEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_z-0pcCBsEeONzZoWF3LimQ"/>
+    <visualProperties xmi:id="_2jRjMSBsEeONzZoWF3LimQ" position="451.0,21.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_2jRjMiBsEeONzZoWF3LimQ" label="+"/>
+    <attributes xmi:id="_2jRjMyBsEeONzZoWF3LimQ" name="id">
+      <modelElement href="CadastroAluno.uml#_2e1vICBsEeONzZoWF3LimQ"/>
+      <visibility xmi:id="_2jRjNCBsEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_2jRjNSBsEeONzZoWF3LimQ" label="1" max="1" min="1"/>
+      <type xmi:id="_2jRjNiBsEeONzZoWF3LimQ" name="Long">
+        <modelElement href="CadastroAluno.uml#_z_YDESBsEeONzZoWF3LimQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_2jRjNyBsEeONzZoWF3LimQ" name="clone">
+      <modelElement href="CadastroAluno.uml#_2e29QCBsEeONzZoWF3LimQ"/>
+      <visibility xmi:id="_2jRjOCBsEeONzZoWF3LimQ" label="+"/>
+      <outParameters xmi:id="_2jRjOSBsEeONzZoWF3LimQ">
+        <modelElement href="CadastroAluno.uml#_2fEYoCBsEeONzZoWF3LimQ"/>
+        <type xmi:id="_2jRjOiBsEeONzZoWF3LimQ" name="Object">
+          <modelElement href="CadastroAluno.uml#_z_7csCBsEeONzZoWF3LimQ"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_4SRz8CByEeONzZoWF3LimQ" name="Aluno" generalizations="_4SOwoCByEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_4LdaQCByEeONzZoWF3LimQ"/>
+    <visualProperties xmi:id="_4SRz8SByEeONzZoWF3LimQ" position="193.0,549.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_4SRz8iByEeONzZoWF3LimQ" name="Table">
+      <modelElement href="CadastroAluno.uml#_4L_lwCByEeONzZoWF3LimQ"/>
+    </stereotypes>
+    <stereotypes xmi:id="_4SRz8yByEeONzZoWF3LimQ" name="JPA1StyledElement">
+      <modelElement href="CadastroAluno.uml#_4MAz4CByEeONzZoWF3LimQ"/>
+    </stereotypes>
+    <stereotypes xmi:id="_4SRz9CByEeONzZoWF3LimQ" name="TechnicalSupplement">
+      <modelElement href="CadastroAluno.uml#_4MBa8CByEeONzZoWF3LimQ"/>
+    </stereotypes>
+    <visibility xmi:id="_4SRz9SByEeONzZoWF3LimQ" label="+"/>
+    <attributes xmi:id="_4SRz9iByEeONzZoWF3LimQ" name="ra">
+      <modelElement href="CadastroAluno.uml#_4MZOYCByEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_4SRz9yByEeONzZoWF3LimQ" name="Column">
+        <modelElement href="CadastroAluno.uml#_4M8A8CByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_4SRz-CByEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_4SRz-SByEeONzZoWF3LimQ" label="1" max="1" min="1"/>
+      <type xmi:id="_4SRz-iByEeONzZoWF3LimQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_W88m8SByEeONzZoWF3LimQ" sourceConnectionVisual="_W88m8iByEeONzZoWF3LimQ" text="&#xD;&#xA;@author WilliamRodrigues&#xD;&#xA; *" item="_W9INICByEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_W1nP4CByEeONzZoWF3LimQ"/>
+    <visualProperties xmi:id="_DLxsECB-EeONzZoWF3LimQ" position="877.0,213.0" size="200.0,150.0" visible="false"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_0FFpgCBsEeONzZoWF3LimQ" comments="_0FAxACBsEeONzZoWF3LimQ" targetConnectionVisual="_0FAxASBsEeONzZoWF3LimQ" name="ModelEntity" generalizations="_2jPuACBsEeONzZoWF3LimQ" subclassedBy="_0FB_ICBsEeONzZoWF3LimQ _W88m8CByEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_w6eHoSBsEeONzZoWF3LimQ"/>
+    <visualProperties xmi:id="_0FFpgSBsEeONzZoWF3LimQ" position="408.0,183.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_0FFpgiBsEeONzZoWF3LimQ" name="PersistentPart">
+      <modelElement href="CadastroAluno.uml#_z8E3cCBsEeONzZoWF3LimQ"/>
+    </stereotypes>
+    <stereotypes xmi:id="_0FFpgyBsEeONzZoWF3LimQ" name="JPA1StyledElement">
+      <modelElement href="CadastroAluno.uml#_z8GFkCBsEeONzZoWF3LimQ"/>
+    </stereotypes>
+    <stereotypes xmi:id="_0FFphCBsEeONzZoWF3LimQ" name="TechnicalSupplement">
+      <modelElement href="CadastroAluno.uml#_z8HTsCBsEeONzZoWF3LimQ"/>
+    </stereotypes>
+    <visibility xmi:id="_0FFphSBsEeONzZoWF3LimQ" label="+"/>
+    <attributes xmi:id="_0FFphiBsEeONzZoWF3LimQ" name="id">
+      <modelElement href="CadastroAluno.uml#_0BF6UCBsEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_0FFphyBsEeONzZoWF3LimQ" name="PrimaryKey">
+        <modelElement href="CadastroAluno.uml#_0BGhYCBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_0FFpiCBsEeONzZoWF3LimQ" name="GeneratedValueMapping">
+        <modelElement href="CadastroAluno.uml#_0BHIcCBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_0FFpiSBsEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_0FFpiiBsEeONzZoWF3LimQ" label="1" max="1" min="1"/>
+      <type xmi:id="_0FFpiyBsEeONzZoWF3LimQ" name="Long">
+        <modelElement href="CadastroAluno.uml#_z_YDESBsEeONzZoWF3LimQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_0FFpjCBsEeONzZoWF3LimQ" name="toString">
+      <modelElement href="CadastroAluno.uml#_z8Ih0CBsEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_0FFpjSBsEeONzZoWF3LimQ" name="LegacyStyledElement">
+        <modelElement href="CadastroAluno.uml#_z8Jv8CBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_0FFpjiBsEeONzZoWF3LimQ" name="Annotations">
+        <modelElement href="CadastroAluno.uml#_z8Jv8SBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_0FFpjyBsEeONzZoWF3LimQ" label="+"/>
+      <outParameters xmi:id="_0FFpkCBsEeONzZoWF3LimQ">
+        <modelElement href="CadastroAluno.uml#_z8JI4CBsEeONzZoWF3LimQ"/>
+        <type xmi:id="_0FFpkSBsEeONzZoWF3LimQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_0FFpkiBsEeONzZoWF3LimQ" name="clone">
+      <modelElement href="CadastroAluno.uml#_z8KXASBsEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_0FFpkyBsEeONzZoWF3LimQ" name="StyledElement">
+        <modelElement href="CadastroAluno.uml#_z8K-ECBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_0FFplCBsEeONzZoWF3LimQ" label="+"/>
+      <outParameters xmi:id="_0FGQkCBsEeONzZoWF3LimQ">
+        <modelElement href="CadastroAluno.uml#_0AgrgCBsEeONzZoWF3LimQ"/>
+        <type xmi:id="_0FGQkSBsEeONzZoWF3LimQ" name="Object">
+          <modelElement href="CadastroAluno.uml#_z_7csCBsEeONzZoWF3LimQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_0FGQkiBsEeONzZoWF3LimQ" name="equals">
+      <modelElement href="CadastroAluno.uml#_0AePQSBsEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_0FGQkyBsEeONzZoWF3LimQ" name="LegacyStyledElement">
+        <modelElement href="CadastroAluno.uml#_0AfdYCBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_0FGQlCBsEeONzZoWF3LimQ" name="Annotations">
+        <modelElement href="CadastroAluno.uml#_0AgEcCBsEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_0FGQlSBsEeONzZoWF3LimQ" label="+"/>
+      <outParameters xmi:id="_0FGQliBsEeONzZoWF3LimQ">
+        <modelElement href="CadastroAluno.uml#_0Ae2UCBsEeONzZoWF3LimQ"/>
+        <type xmi:id="_0FGQlyBsEeONzZoWF3LimQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_0FGQmCBsEeONzZoWF3LimQ" name="obj">
+        <modelElement href="CadastroAluno.uml#_0AePQiBsEeONzZoWF3LimQ"/>
+        <type xmi:id="_0FGQmSBsEeONzZoWF3LimQ" name="Object">
+          <modelElement href="CadastroAluno.uml#_z_7csCBsEeONzZoWF3LimQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_RIuvICB-EeONzZoWF3LimQ" name="Grupo" associationsOut="_W9HmECByEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_Wy220CByEeONzZoWF3LimQ"/>
+    <visualProperties xmi:id="_RIuvISB-EeONzZoWF3LimQ" position="815.0,534.0"/>
+    <stereotypes xmi:id="_RIuvIiB-EeONzZoWF3LimQ" name="Reference">
+      <modelElement href="CadastroAluno.uml#_WzZpYCByEeONzZoWF3LimQ"/>
+    </stereotypes>
+    <visibility xmi:id="_RIuvIyB-EeONzZoWF3LimQ" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_W9INICByEeONzZoWF3LimQ" comments="_W88m8SByEeONzZoWF3LimQ" targetConnectionVisual="_W88m8iByEeONzZoWF3LimQ" name="Usuario" associationsIn="_xFUFsCBsEeONzZoWF3LimQ _W9HmECByEeONzZoWF3LimQ" generalizations="_W88m8CByEeONzZoWF3LimQ">
+    <modelElement href="CadastroAluno.uml#_w7BhQSBsEeONzZoWF3LimQ"/>
+    <visualProperties xmi:id="_W9INISByEeONzZoWF3LimQ" position="627.0,390.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_W9INIiByEeONzZoWF3LimQ" name="LegacyStyledElement">
+      <modelElement href="CadastroAluno.uml#_WtZIACByEeONzZoWF3LimQ"/>
+    </stereotypes>
+    <stereotypes xmi:id="_W9INIyByEeONzZoWF3LimQ" name="Annotations">
+      <modelElement href="CadastroAluno.uml#_WtvtUCByEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="_g19TcCByEeONzZoWF3LimQ" visible="false"/>
+    </stereotypes>
+    <visibility xmi:id="_W9INJCByEeONzZoWF3LimQ" label="+"/>
+    <attributes xmi:id="_W9INJSByEeONzZoWF3LimQ" defaultValue="1L" name="serialVersionUID" staticAttribute="true">
+      <modelElement href="CadastroAluno.uml#_WzkogCByEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="_fKda8CByEeONzZoWF3LimQ" visible="false"/>
+      <stereotypes xmi:id="_W9INJiByEeONzZoWF3LimQ" name="StyledElement">
+        <modelElement href="CadastroAluno.uml#_WzlPkSByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9INJyByEeONzZoWF3LimQ" label="-"/>
+      <cardinality xmi:id="_W9INKCByEeONzZoWF3LimQ" label="1" max="1" min="1"/>
+      <type xmi:id="_W9INKSByEeONzZoWF3LimQ" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_W9INKiByEeONzZoWF3LimQ" name="nmUsuario">
+      <modelElement href="CadastroAluno.uml#_WzlPkiByEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="_w1aYwCB9EeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_W9INKyByEeONzZoWF3LimQ" name="Column">
+        <modelElement href="CadastroAluno.uml#_W0ICICByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_W9INLCByEeONzZoWF3LimQ" name="Size">
+        <modelElement href="CadastroAluno.uml#_W0ICISByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_W9INLSByEeONzZoWF3LimQ" name="JPA1StyledElement">
+        <modelElement href="CadastroAluno.uml#_W0J3UCByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9INLiByEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_W9INLyByEeONzZoWF3LimQ" label="1" max="1" min="1"/>
+      <type xmi:id="_W9INMCByEeONzZoWF3LimQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_W9INMSByEeONzZoWF3LimQ" name="userName">
+      <modelElement href="CadastroAluno.uml#_W0KeYCByEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="_w1bm4CB9EeONzZoWF3LimQ"/>
+      <visibility xmi:id="_W9INMiByEeONzZoWF3LimQ" label="-"/>
+      <cardinality xmi:id="_W9INMyByEeONzZoWF3LimQ" label="1" max="1" min="1"/>
+      <type xmi:id="_W9INNCByEeONzZoWF3LimQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_W9INNSByEeONzZoWF3LimQ" name="edEmail">
+      <modelElement href="CadastroAluno.uml#_W0LFcCByEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="_w1bm4SB9EeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_W9INNiByEeONzZoWF3LimQ" name="Column">
+        <modelElement href="CadastroAluno.uml#_W0tQ8CByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_W9INNyByEeONzZoWF3LimQ" name="Size">
+        <modelElement href="CadastroAluno.uml#_W0tQ8SByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_W9INOCByEeONzZoWF3LimQ" name="JPA1StyledElement">
+        <modelElement href="CadastroAluno.uml#_W0vGICByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9INOSByEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_W9INOiByEeONzZoWF3LimQ" label="1" max="1" min="1"/>
+      <type xmi:id="_W9INOyByEeONzZoWF3LimQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_W9INPCByEeONzZoWF3LimQ" name="senha">
+      <modelElement href="CadastroAluno.uml#_W0vtMCByEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="_w1c1ACB9EeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_W9INPSByEeONzZoWF3LimQ" name="Column">
+        <modelElement href="CadastroAluno.uml#_W1R4sCByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_W9INPiByEeONzZoWF3LimQ" name="JPA1StyledElement">
+        <modelElement href="CadastroAluno.uml#_W1Tt4CByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9INPyByEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_W9INQCByEeONzZoWF3LimQ" label="1" max="1" min="1"/>
+      <type xmi:id="_W9INQSByEeONzZoWF3LimQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_W9INQiByEeONzZoWF3LimQ" name="ativo">
+      <modelElement href="CadastroAluno.uml#_W1Tt4SByEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="_w1dcECB9EeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_W9INQyByEeONzZoWF3LimQ" name="NotNull">
+        <modelElement href="CadastroAluno.uml#_W1U8ACByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_W9INRCByEeONzZoWF3LimQ" name="JPA1StyledElement">
+        <modelElement href="CadastroAluno.uml#_W1WKICByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9INRSByEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_W9INRiByEeONzZoWF3LimQ" label="1" max="1" min="1"/>
+      <type xmi:id="_W9INRyByEeONzZoWF3LimQ" name="Character">
+        <modelElement href="CadastroAluno.uml#_WyTdMCByEeONzZoWF3LimQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_W9INSCByEeONzZoWF3LimQ" defaultValue="new ArrayList&lt;Grupo>()" name="grupos">
+      <modelElement href="CadastroAluno.uml#_W1WKISByEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="_gGjPwCByEeONzZoWF3LimQ" visible="false"/>
+      <stereotypes xmi:id="_W9INSSByEeONzZoWF3LimQ" name="FetchStrategy">
+        <modelElement href="CadastroAluno.uml#_W1XYQCByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_W9INSiByEeONzZoWF3LimQ" name="JoinTable">
+        <modelElement href="CadastroAluno.uml#_W1X_UCByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_W9INSyByEeONzZoWF3LimQ" name="JPA1StyledElement">
+        <modelElement href="CadastroAluno.uml#_W1YmYCByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_W9INTCByEeONzZoWF3LimQ" name="FetchStrategy">
+        <modelElement href="CadastroAluno.uml#_W1XYQCByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_W9INTSByEeONzZoWF3LimQ" name="JoinTable">
+        <modelElement href="CadastroAluno.uml#_W1X_UCByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_W9INTiByEeONzZoWF3LimQ" name="JPA1StyledElement">
+        <modelElement href="CadastroAluno.uml#_W1YmYCByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9INTyByEeONzZoWF3LimQ" label="+"/>
+      <cardinality xmi:id="_W9INUCByEeONzZoWF3LimQ" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_W9INUSByEeONzZoWF3LimQ" name="Grupo">
+        <modelElement href="CadastroAluno.uml#_Wy220CByEeONzZoWF3LimQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_W9INUiByEeONzZoWF3LimQ" name="getUsername">
+      <modelElement href="CadastroAluno.uml#_WteAgCByEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="__afLwCB9EeONzZoWF3LimQ" visible="false"/>
+      <stereotypes xmi:id="_W9INUyByEeONzZoWF3LimQ" name="Annotations">
+        <modelElement href="CadastroAluno.uml#_Wtf1sCByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9INVCByEeONzZoWF3LimQ" label="+"/>
+      <outParameters xmi:id="_W9INVSByEeONzZoWF3LimQ">
+        <modelElement href="CadastroAluno.uml#_WtenkCByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9INViByEeONzZoWF3LimQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_W9INVyByEeONzZoWF3LimQ" name="setUsername">
+      <modelElement href="CadastroAluno.uml#_Wthq4CByEeONzZoWF3LimQ"/>
+      <visualProperties xmi:id="__agZ4CB9EeONzZoWF3LimQ" visible="false"/>
+      <stereotypes xmi:id="_W9INWCByEeONzZoWF3LimQ" name="StyledElement">
+        <modelElement href="CadastroAluno.uml#_WtiR8CByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9INWSByEeONzZoWF3LimQ" label="+"/>
+      <parameters xmi:id="_W9INWiByEeONzZoWF3LimQ" name="userName">
+        <modelElement href="CadastroAluno.uml#_Wthq4SByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9INWyByEeONzZoWF3LimQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_W9INXCByEeONzZoWF3LimQ" name="setSenhaUsuario">
+      <modelElement href="CadastroAluno.uml#_WtiR8SByEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_W9INXSByEeONzZoWF3LimQ" name="StyledElement">
+        <modelElement href="CadastroAluno.uml#_Wti5ASByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9INXiByEeONzZoWF3LimQ" label="+"/>
+      <parameters xmi:id="_W9INXyByEeONzZoWF3LimQ" name="senha">
+        <modelElement href="CadastroAluno.uml#_Wti5ACByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9INYCByEeONzZoWF3LimQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_W9INYSByEeONzZoWF3LimQ" name="getSenhaUsuario">
+      <modelElement href="CadastroAluno.uml#_WtjgECByEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_W9INYiByEeONzZoWF3LimQ" name="Annotations">
+        <modelElement href="CadastroAluno.uml#_WtkHICByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9INYyByEeONzZoWF3LimQ" label="+"/>
+      <outParameters xmi:id="_W9INZCByEeONzZoWF3LimQ">
+        <modelElement href="CadastroAluno.uml#_WtjgESByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9INZSByEeONzZoWF3LimQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_W9INZiByEeONzZoWF3LimQ" name="isTemAcesso">
+      <modelElement href="CadastroAluno.uml#_Wtl8UCByEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_W9INZyByEeONzZoWF3LimQ" name="Annotations">
+        <modelElement href="CadastroAluno.uml#_WtnKcCByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9INaCByEeONzZoWF3LimQ" label="+"/>
+      <outParameters xmi:id="_W9INaSByEeONzZoWF3LimQ">
+        <modelElement href="CadastroAluno.uml#_WtmjYCByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9INaiByEeONzZoWF3LimQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_W9INayByEeONzZoWF3LimQ" name="pagina">
+        <modelElement href="CadastroAluno.uml#_Wtl8USByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9INbCByEeONzZoWF3LimQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_W9INbSByEeONzZoWF3LimQ" name="cdAcao">
+        <modelElement href="CadastroAluno.uml#_Wtl8UiByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9INbiByEeONzZoWF3LimQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_W9INbyByEeONzZoWF3LimQ" name="isTemAcesso">
+      <modelElement href="CadastroAluno.uml#_WtoYkCByEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_W9INcCByEeONzZoWF3LimQ" name="Annotations">
+        <modelElement href="CadastroAluno.uml#_Wto_oCByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9I0MCByEeONzZoWF3LimQ" label="+"/>
+      <outParameters xmi:id="_W9I0MSByEeONzZoWF3LimQ">
+        <modelElement href="CadastroAluno.uml#_WtoYkiByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9I0MiByEeONzZoWF3LimQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_W9I0MyByEeONzZoWF3LimQ" name="pagina">
+        <modelElement href="CadastroAluno.uml#_WtoYkSByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9I0NCByEeONzZoWF3LimQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_W9I0NSByEeONzZoWF3LimQ" name="checkValidKey">
+      <modelElement href="CadastroAluno.uml#_WtqNwCByEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_W9I0NiByEeONzZoWF3LimQ" name="Annotations">
+        <modelElement href="CadastroAluno.uml#_Wtrb4CByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9I0NyByEeONzZoWF3LimQ" label="+"/>
+      <outParameters xmi:id="_W9I0OCByEeONzZoWF3LimQ">
+        <modelElement href="CadastroAluno.uml#_WtqNwiByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9I0OSByEeONzZoWF3LimQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_W9I0OiByEeONzZoWF3LimQ" name="key">
+        <modelElement href="CadastroAluno.uml#_WtqNwSByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9I0OyByEeONzZoWF3LimQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_W9I0PCByEeONzZoWF3LimQ" name="getUserKey">
+      <modelElement href="CadastroAluno.uml#_Wtrb4iByEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_W9I0PSByEeONzZoWF3LimQ" name="Annotations">
+        <modelElement href="CadastroAluno.uml#_WtsqACByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9I0PiByEeONzZoWF3LimQ" label="+"/>
+      <outParameters xmi:id="_W9I0PyByEeONzZoWF3LimQ">
+        <modelElement href="CadastroAluno.uml#_WtsC8CByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9I0QCByEeONzZoWF3LimQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_W9I0QSByEeONzZoWF3LimQ" name="changePosition">
+      <modelElement href="CadastroAluno.uml#_WttRECByEeONzZoWF3LimQ"/>
+      <stereotypes xmi:id="_W9I0QiByEeONzZoWF3LimQ" name="StyledElement">
+        <modelElement href="CadastroAluno.uml#_Wtt4ISByEeONzZoWF3LimQ"/>
+      </stereotypes>
+      <visibility xmi:id="_W9I0QyByEeONzZoWF3LimQ" label="-"/>
+      <parameters xmi:id="_W9I0RCByEeONzZoWF3LimQ" name="ch">
+        <modelElement href="CadastroAluno.uml#_WttRESByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9I0RSByEeONzZoWF3LimQ" name="char">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_W9I0RiByEeONzZoWF3LimQ" name="p1">
+        <modelElement href="CadastroAluno.uml#_WttREiByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9I0RyByEeONzZoWF3LimQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_W9I0SCByEeONzZoWF3LimQ" name="p2">
+        <modelElement href="CadastroAluno.uml#_Wtt4ICByEeONzZoWF3LimQ"/>
+        <type xmi:id="_W9I0SSByEeONzZoWF3LimQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

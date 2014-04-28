@@ -15,8 +15,19 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.wst.validation.validationbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.m2e.core.maven2Builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 		<nature>org.grails.ide.eclipse.core.nature</nature>
 		<nature>org.eclipse.jdt.groovy.core.groovyNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
@@ -26,18 +37,17 @@
 		<link>
 			<name>.link_to_grails_plugins</name>
 			<type>2</type>
-			<location>D:/GitHub/OpenShift/jbossas/grails/target/work/plugins</location>
+			<location>D:/GitHub/Maven/JCadApplication/grails/plugins</location>
 		</link>
 		<link>
-			<name>src/main/java</name>
+			<name>src/conf</name>
 			<type>2</type>
-			<location>D:/GitHub/OpenShift/jbossas/ejb/src/main/java</location>
+			<locationURI>WORKSPACE_LOC/Maven/JCadApplication/ejb/src/main/conf</locationURI>
+		</link>
+		<link>
+			<name>src/java</name>
+			<type>2</type>
+			<locationURI>WORKSPACE_LOC/Maven/JCadApplication/ejb/src/main/java</locationURI>
 		</link>
 	</linkedResources>
-	<variableList>
-		<variable>
-			<name>GitHub</name>
-			<value>file:/D:/GitHub</value>
-		</variable>
-	</variableList>
 </projectDescription>
