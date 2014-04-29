@@ -12,6 +12,13 @@
 		<param-value>Production</param-value>
 	</context-param>
 	
+	<!-- Configuracoes do Banco de Dados -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+	<!-- /// -->
+	
 	<!-- Filtro para o Hibernate -->
 	<filter>
 		<filter-name>HibernateFilter</filter-name>
