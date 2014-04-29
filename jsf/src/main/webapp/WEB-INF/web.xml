@@ -6,7 +6,7 @@
 						http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
 	
-	<display-name>JCadApp</display-name>
+	<display-name>JCadApplication-jsf</display-name>
 	<context-param>
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
 		<param-value>Production</param-value>

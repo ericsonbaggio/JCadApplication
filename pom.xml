@@ -16,12 +16,12 @@
 			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
 		</license>
 	</licenses>
-	
+
 	<modules>
 		<module>ear</module>
 		<module>ejb</module>
 		<module>jsf</module>
-		
+		<module>ws</module>
 	</modules>
 
 	<properties>
@@ -44,7 +44,7 @@
 		<version.surefire.plugin>2.10</version.surefire.plugin>
 		<version.war.plugin>2.1.1</version.war.plugin>
 	</properties>
-	
+
 	<dependencyManagement>
 		<dependencies>
 			<!-- Define the version of the EJB jar so that we don't need to repeat ourselves in every module -->
@@ -64,8 +64,16 @@
 				<scope>compile</scope>
 			</dependency>
 			
+			<dependency>
+				<groupId>br.cad</groupId>
+				<artifactId>JCadApplication-ws</artifactId>
+				<version>${project.version}</version>
+				<type>war</type>
+				<scope>compile</scope>
+			</dependency>
+
 			<!-- Define the version of the WAR so that we don't need to repeat ourselves in every module -->
-			
+
 			<dependency>
 				<groupId>org.jboss.bom</groupId>
 				<artifactId>jboss-javaee-6.0-with-tools</artifactId>
@@ -83,7 +91,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<build>
 		<pluginManagement>
 			<plugins>

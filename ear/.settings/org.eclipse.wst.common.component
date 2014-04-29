@@ -5,6 +5,9 @@
         <dependent-module archiveName="JCadApplication-jsf.war" deploy-path="/" handle="module:/resource/JCadApplication-jsf/JCadApplication-jsf">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="JCadApplication-ws.war" deploy-path="/" handle="module:/resource/JCadApplication-ws/JCadApplication-ws">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="JCadApplication-ejb.jar" deploy-path="/" handle="module:/resource/JCadApplication-ejb/JCadApplication-ejb">
             <dependency-type>uses</dependency-type>
         </dependent-module>

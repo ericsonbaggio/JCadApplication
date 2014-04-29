@@ -29,6 +29,12 @@
 			<artifactId>JCadApplication-jsf</artifactId>
 			<type>war</type>
 		</dependency>
+		
+		<dependency>
+			<groupId>br.cad</groupId>
+			<artifactId>JCadApplication-ws</artifactId>
+			<type>war</type>
+		</dependency>
 
 		<dependency>
 			<groupId>br.cad</groupId>
