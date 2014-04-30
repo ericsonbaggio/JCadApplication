@@ -11,8 +11,11 @@ import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import org.codehaus.jackson.annotate.JsonIgnore;
 
 import br.cad.model.ModelEntity;
 import br.cad.model.system.User;
@@ -85,6 +88,7 @@ public abstract class PessoaPapel extends ModelEntity implements Serializable {
 		this.sitPessoa = sitPessoa;
 	}
 
+	@JsonIgnore
 	@JoinColumn(name = "usuario")
 	@NotNull(message = "Usuário deve ser preenchido")
 	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -94,6 +98,11 @@ public abstract class PessoaPapel extends ModelEntity implements Serializable {
 
 	public void setUsuario(User usuario) {
 		this.usuario = usuario;
+	}
+	
+	@Transient
+	public Long getUsuario_id() {
+		return usuario.getId();
 	}
 
 	/*

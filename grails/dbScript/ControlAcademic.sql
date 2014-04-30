@@ -1,13 +1,13 @@
 INSERT INTO `Dominio` (`id`, `icone`, `name`, `orderObject`, `idDomain`)  VALUES (1,'icon-cogs','CAD - Admin',0,NULL);
-INSERT INTO `Dominio` (`id`, `icone`, `name`, `orderObject`, `idDomain`)  VALUES (2,'icon-leaf','AcadÃªmico',1,NULL);
+INSERT INTO `Dominio` (`id`, `icone`, `name`, `orderObject`, `idDomain`)  VALUES (2,'icon-leaf','Acadêmico',1,NULL);
 INSERT INTO `Dominio` (`id`, `icone`, `name`, `orderObject`, `idDomain`)  VALUES (3,'icon-group','Pessoas',2,NULL);
 
 
-INSERT INTO `Recurso` (`id`, `controllerBean`, `icon`, `indexPage`, `locationOfFiles`, `name`, `objectClass`, `idDomain`) VALUES (1,'ActionController','imagens/action.ico','list','confApp/action/','AÃ§Ã£o','Action',1);
-INSERT INTO `Recurso` (`id`, `controllerBean`, `icon`, `indexPage`, `locationOfFiles`, `name`, `objectClass`, `idDomain`) VALUES (2,'DomainController','imagens/domain.ico','list','confApp/domain/','DomÃ­nio','Domain',1);
+INSERT INTO `Recurso` (`id`, `controllerBean`, `icon`, `indexPage`, `locationOfFiles`, `name`, `objectClass`, `idDomain`) VALUES (1,'ActionController','imagens/action.ico','list','confApp/action/','Ação','Action',1);
+INSERT INTO `Recurso` (`id`, `controllerBean`, `icon`, `indexPage`, `locationOfFiles`, `name`, `objectClass`, `idDomain`) VALUES (2,'DomainController','imagens/domain.ico','list','confApp/domain/','Domínio','Domain',1);
 INSERT INTO `Recurso` (`id`, `controllerBean`, `icon`, `indexPage`, `locationOfFiles`, `name`, `objectClass`, `idDomain`) VALUES (3,'GroupController','imagens/group.ico','list','confApp/group/','Grupo','Group',1);
 INSERT INTO `Recurso` (`id`, `controllerBean`, `icon`, `indexPage`, `locationOfFiles`, `name`, `objectClass`, `idDomain`) VALUES (4,'ResourceController','imagens/resource.ico','list','confApp/resource/','Recurso','Resource',1);
-INSERT INTO `Recurso` (`id`, `controllerBean`, `icon`, `indexPage`, `locationOfFiles`, `name`, `objectClass`, `idDomain`) VALUES (5,'UserController','imagens/user.ico','list','confApp/user/','UsuÃ¡rio','User',1);
+INSERT INTO `Recurso` (`id`, `controllerBean`, `icon`, `indexPage`, `locationOfFiles`, `name`, `objectClass`, `idDomain`) VALUES (5,'UserController','imagens/user.ico','list','confApp/user/','Usuário','User',1);
 INSERT INTO `Recurso` (`id`, `controllerBean`, `icon`, `indexPage`, `locationOfFiles`, `name`, `objectClass`, `idDomain`) VALUES (6,'CursoController','imagens/books.ico','list','academico/curso/','Curso','Curso',2);
 INSERT INTO `Recurso` (`id`, `controllerBean`, `icon`, `indexPage`, `locationOfFiles`, `name`, `objectClass`, `idDomain`) VALUES (7,'DisciplinaController','imagens/discipline.ico','list','academico/disciplina/','Disciplina','Disciplina',2);
 INSERT INTO `Recurso` (`id`, `controllerBean`, `icon`, `indexPage`, `locationOfFiles`, `name`, `objectClass`, `idDomain`) VALUES (8,'TurmaController','imagens/team.ico','list','academico/turma/','Turma','Turma',2);
@@ -408,7 +408,7 @@ INSERT INTO `ActionsFile` (`idFile`, `idAction`) VALUES (54,5);
 
 
 INSERT INTO `Grupo` (`id`, `description`, `name`) VALUES (1,'Administrador todo o sistema.','SYS - ADMIN');
-INSERT INTO `Grupo` (`id`, `description`, `name`) VALUES (2,'Administrar a todo o sistema acadÃªmico.','Administradores');
+INSERT INTO `Grupo` (`id`, `description`, `name`) VALUES (2,'Administrar a todo o sistema acadêmico.','Administradores');
 INSERT INTO `Grupo` (`id`, `description`, `name`) VALUES (3,'Grupo de Professores.','Professores');
 INSERT INTO `Grupo` (`id`, `description`, `name`) VALUES (4,'Grupo de Alunos.','Alunos');
 

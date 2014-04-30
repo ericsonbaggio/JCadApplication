@@ -12,6 +12,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 import br.cad.model.academico.Disciplina;
 
 @Entity
@@ -46,6 +48,7 @@ public class Docente extends PessoaPapel implements Serializable {
 		this.ra = ra;
 	}
 
+	@JsonIgnore
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinTable(name = "DocenteDisciplina",
 			joinColumns = { @JoinColumn(name = "docente", referencedColumnName = "id") },
@@ -57,11 +60,11 @@ public class Docente extends PessoaPapel implements Serializable {
 	public void setDisciplinasAptas(List<Disciplina> disciplinasAptas) {
 		this.disciplinasAptas = disciplinasAptas;
 	}
+	
 	/*
 	 * *******************************************************************************************************************
 	 * ***************************************************** Metodos *****************************************************
 	 * *******************************************************************************************************************
 	 */
-
 
 }

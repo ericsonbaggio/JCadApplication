@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 import br.cad.model.academico.Matricula;
 
 @Entity
@@ -47,6 +49,7 @@ public class Aluno extends PessoaPapel implements Serializable {
 		this.ra = ra;
 	}
 
+	@JsonIgnore
 	@JoinColumn(name = "aluno")
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	public List<Matricula> getMatriculas() {

@@ -9,7 +9,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
+
+import org.codehaus.jackson.annotate.JsonIgnore;
 
 import br.cad.model.ModelEntity;
 import br.cad.model.pessoa.Aluno;
@@ -38,6 +41,7 @@ public class Matricula extends ModelEntity implements Serializable {
 	 * ******************************************************************************************************************
 	 */
 
+	@JsonIgnore
 	@JoinColumn(name = "aluno")
 	@NotNull(message = "Aluno requerido.")
 	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -48,7 +52,13 @@ public class Matricula extends ModelEntity implements Serializable {
 	public void setAluno(Aluno aluno) {
 		this.aluno = aluno;
 	}
+	
+	@Transient
+	public Long getAluno_id() {
+		return aluno.getId();
+	}
 
+	@JsonIgnore
 	@JoinColumn(name = "curso")
 	@NotNull(message = "Curso requerido.")
 	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -59,7 +69,13 @@ public class Matricula extends ModelEntity implements Serializable {
 	public void setCurso(Curso curso) {
 		this.curso = curso;
 	}
+	
+	@Transient
+	public Long getCurso_id() {
+		return curso.getId();
+	}
 
+	@JsonIgnore
 	@JoinColumn(name = "curriculo")
 	@NotNull(message = "Curriculo requerido.")
 	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -69,6 +85,11 @@ public class Matricula extends ModelEntity implements Serializable {
 
 	public void setCurriculo(MatrizCurricular curriculo) {
 		this.curriculo = curriculo;
+	}
+	
+	@Transient
+	public Long getCurriculo_id() {
+		return curso.getId();
 	}
 
 	/*

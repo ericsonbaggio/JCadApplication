@@ -64,4 +64,11 @@ public class PessoaPapelServiceImpl<PESSOA extends PessoaPapel, PESSOADAO extend
 	public Boolean disablePeople(PESSOA pessoa) {
 		return dao.disablePeople(pessoa);
 	}
+
+	@Override
+	public PESSOA save(PESSOA model) {
+		model.getUsuario().setActive(model.getSitPessoa());
+		
+		return super.save(model);
+	}
 }
