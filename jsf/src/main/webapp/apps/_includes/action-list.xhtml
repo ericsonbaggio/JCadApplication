@@ -14,14 +14,14 @@
 	<div class="col-xs-12 center">
 		<p>
 			<ui:repeat var="act" value="#{controller.actionsPageByUser}">
-				<h:panelGroup rendered="#{act.typeComponet=='LINK' &#38;&#38; (act.code eq 'actEdit' or act.code eq 'actView' or act.code eq 'actReturn')}">
+				<h:panelGroup rendered="#{act.typeComponet=='LINK' and (act.code eq 'actEdit' or act.code eq 'actView' or act.code eq 'actReturn')}">
 					<a href="#{controller.contexPath()}#{controller.resourceSelected.locationOfFiles}#{act.method}/#{idModel}" title="#{act.name}" class="btn btn-lg btn-#{act.classColor} btn-block">
 						<i class="#{act.icon}"/>
 						#{act.name}
 					</a>
 				</h:panelGroup>
 				
-				<h:panelGroup rendered="#{act.typeComponet=='LINK' &#38;&#38; (act.code eq 'actNew' or act.code eq 'actList')}">
+				<h:panelGroup rendered="#{act.typeComponet=='LINK' and (act.code eq 'actNew' or act.code eq 'actList')}">
 					<a href="#{controller.contexPath()}#{controller.resourceSelected.locationOfFiles}#{act.method}" title="#{act.name}" class="btn btn-lg btn-#{act.classColor} btn-block">
 						<i class="#{act.icon}"/>
 						#{act.name}
